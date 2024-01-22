@@ -13,10 +13,10 @@ class Scraper():
         quotes  = result.html.find('div.quote')
 
         for q in quotes:
-            item = {
-                'text': q.find('span.text', first = True).text.strip(),
-                'Author': q.find('small.author', first = True).text.strip(),
-                }
+            item = []
+            item.append(q.find('span.text', first = True).text.strip())
+            item.append(q.find('small.author', first = True).text.strip())
+                
             qlist.append(item)
         
         return qlist
