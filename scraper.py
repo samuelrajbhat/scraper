@@ -22,7 +22,7 @@ class Scraper():
         return qlist
     
 quotes = Scraper()
-quotes.scrapedata('life')
+# quotes.scrapedata('life')
 
 
          

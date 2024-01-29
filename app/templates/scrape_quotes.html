@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to Scraper Page</h1>
+    <div>
+      
+        <table border="1">
+            <tr>
+                <th>Scrape Data</th>
+                
+            </tr>
+            {% for item in id %}
+             <tr>
+                <td>{{ item[0]}}</td>
+                <td>{{ item[1]}}</td>   
+            </tr>
+     
+            {% endfor %}
+        </table>
+    
+</body>
+</html>

@@ -6,22 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome to Scraper Page</h1>
-    <div>
-        <table border="1">
-            <tr>
-                <th>Quotes</th>
-                <th>Author</th>
-            </tr>
-            {% for item in id %}
-            <tr>
-            
-               <td class = display_text >{{ item[0]}}</td>
-               <td class = display_text >{{ item[1]}}</td>
-               
-            </tr>
-            {% endfor %}
-        </table>
-    </div>
+    <h1>Hello</h1>
+    <form method="get" id="myForm">
+        <input type="button" value="Submit" onclick="readHeatwareItem()">
+    </form>
+
+    <script>
+        async function read_webscraper(){
+            try{ response = await fetch ('/webscraper');
+                const data = await response.json();
+                console.log(data);
+                }
+            catch(error){
+                console.error('Err0r:', error);         
+                }
+            }
+    </script>
 </body>
 </html>
